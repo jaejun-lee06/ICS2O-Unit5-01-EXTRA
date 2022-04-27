@@ -9,20 +9,25 @@ class Program
 {
     public static void Main(string[] args)
     {
-        Random random = new Random();
-        int returnNumber = random.Next(1, 6);
         int guess = 0;
+        int randomNumber;
+
+        System.Random random = new System.Random();
+        randomNumber = random.Next(1, 6);
+    
+        // input
         Console.WriteLine("Choose a number from 1-6.");
-        if (guess != returnNumber)
+      
+       // process
+        if (guess != randomNumber)
         {
             guess = Convert.ToInt32(Console.Read());
-            Console.WriteLine("The answer was, " + returnNumber + "!" + " good try");
-            Console.ReadLine();
+            Console.WriteLine("The answer was, " + randomNumber + "!");
         }
-        if (guess == returnNumber)
+      
+        if (guess == randomNumber)
         {
-            Console.WriteLine("The answer was, " + returnNumber + "!" + " Great job");
-            Console.ReadLine();
+            Console.WriteLine("The answer was, " + randomNumber + "!");
         }
     }
 }
